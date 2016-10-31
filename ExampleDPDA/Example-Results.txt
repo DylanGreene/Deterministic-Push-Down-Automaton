@@ -1,0 +1,86 @@
+Example DPDA: Accepts a^nb^n, n >= 1
+1: qs,~,~|q1,z
+2: q1,a,z|q1,A
+3: q1,a,A|qa,A
+4: q1,a,a|qa,a
+5: qa,~,~|q1,a
+6: q1,b,a|q2,~
+7: q2,b,a|q2,~
+8: q1,b,A|q3,~
+9: q2,b,A|q3,~
+Test File: ExampleDPDA/Strings.txt
+String: ab
+1#1: qs,~,~|q1,z
+2#2: q1,a,z|q1,A
+3#8: q1,b,A|q3,~
+Accepted
+String: aabb
+1#1: qs,~,~|q1,z
+2#2: q1,a,z|q1,A
+3#3: q1,a,A|qa,A
+4#5: qa,~,~|q1,a
+5#6: q1,b,a|q2,~
+6#9: q2,b,A|q3,~
+Accepted
+String: aaabbb
+1#1: qs,~,~|q1,z
+2#2: q1,a,z|q1,A
+3#3: q1,a,A|qa,A
+4#5: qa,~,~|q1,a
+5#4: q1,a,a|qa,a
+6#5: qa,~,~|q1,a
+7#6: q1,b,a|q2,~
+8#7: q2,b,a|q2,~
+9#9: q2,b,A|q3,~
+Accepted
+String: aaaabbbb
+1#1: qs,~,~|q1,z
+2#2: q1,a,z|q1,A
+3#3: q1,a,A|qa,A
+4#5: qa,~,~|q1,a
+5#4: q1,a,a|qa,a
+6#5: qa,~,~|q1,a
+7#4: q1,a,a|qa,a
+8#5: qa,~,~|q1,a
+9#6: q1,b,a|q2,~
+10#7: q2,b,a|q2,~
+11#7: q2,b,a|q2,~
+12#9: q2,b,A|q3,~
+Accepted
+String: a
+1#1: qs,~,~|q1,z
+2#2: q1,a,z|q1,A
+Rejected
+String: b
+1#1: qs,~,~|q1,z
+Rejected
+String: abb
+1#1: qs,~,~|q1,z
+2#2: q1,a,z|q1,A
+3#8: q1,b,A|q3,~
+Rejected
+String: aab
+1#1: qs,~,~|q1,z
+2#2: q1,a,z|q1,A
+3#3: q1,a,A|qa,A
+4#5: qa,~,~|q1,a
+5#6: q1,b,a|q2,~
+Rejected
+String: aabbb
+1#1: qs,~,~|q1,z
+2#2: q1,a,z|q1,A
+3#3: q1,a,A|qa,A
+4#5: qa,~,~|q1,a
+5#6: q1,b,a|q2,~
+6#9: q2,b,A|q3,~
+Rejected
+String: aaabb
+1#1: qs,~,~|q1,z
+2#2: q1,a,z|q1,A
+3#3: q1,a,A|qa,A
+4#5: qa,~,~|q1,a
+5#4: q1,a,a|qa,a
+6#5: qa,~,~|q1,a
+7#6: q1,b,a|q2,~
+8#7: q2,b,a|q2,~
+Rejected
