@@ -1,0 +1,37 @@
+M2: Simple Palindrome with trapping
+1: A,a,~|A,a
+2: A,b,~|A,b
+3: A,c,~|F,~
+4: F,a,a|F,~
+5: F,b,b|F,~
+6: F,c,~|T,~
+7: F,a,b|T,~
+8: F,b,a|T,~
+Test File: M2/M2-Reject.txt
+String: abba
+1#1: A,a,~|A,a
+2#2: A,b,~|A,b
+3#2: A,b,~|A,b
+4#1: A,a,~|A,a
+Rejected
+String: acb
+1#1: A,a,~|A,a
+2#3: A,c,~|F,~
+3#8: F,b,a|T,~
+Rejected
+String: ca
+1#3: A,c,~|F,~
+Rejected
+String: bbcba
+1#2: A,b,~|A,b
+2#2: A,b,~|A,b
+3#3: A,c,~|F,~
+4#5: F,b,b|F,~
+5#7: F,a,b|T,~
+Rejected
+String: baccab
+1#2: A,b,~|A,b
+2#1: A,a,~|A,a
+3#3: A,c,~|F,~
+4#6: F,c,~|T,~
+Rejected

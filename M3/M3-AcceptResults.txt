@@ -1,0 +1,60 @@
+M3:Equal as and bs', with a final $
+1: S,~,~|Q,$
+2: Q,a,$|Q$a,$
+3: Q$a,~,~|Q,a
+4: Q,a,a|Qa,a
+5: Qa,~,~|Q,a
+6: Q,a,b|Q,~
+7: Q,b,$|Q$b,$
+8: Q$b,~,~|Q,b
+9: Q,b,a|Q,~
+10: Q,b,b|Qb,b
+11: Qb,~,~|Q,b
+12: Q,$,$|F,~
+Test File: M3/M3-Accept.txt
+String: ab$
+1#1: S,~,~|Q,$
+2#2: Q,a,$|Q$a,$
+3#3: Q$a,~,~|Q,a
+4#9: Q,b,a|Q,~
+5#12: Q,$,$|F,~
+Accepted
+String: baab$
+1#1: S,~,~|Q,$
+2#7: Q,b,$|Q$b,$
+3#8: Q$b,~,~|Q,b
+4#6: Q,a,b|Q,~
+5#2: Q,a,$|Q$a,$
+6#3: Q$a,~,~|Q,a
+7#9: Q,b,a|Q,~
+8#12: Q,$,$|F,~
+Accepted
+String: abbbaa$
+1#1: S,~,~|Q,$
+2#2: Q,a,$|Q$a,$
+3#3: Q$a,~,~|Q,a
+4#9: Q,b,a|Q,~
+5#7: Q,b,$|Q$b,$
+6#8: Q$b,~,~|Q,b
+7#10: Q,b,b|Qb,b
+8#11: Qb,~,~|Q,b
+9#6: Q,a,b|Q,~
+10#6: Q,a,b|Q,~
+11#12: Q,$,$|F,~
+Accepted
+String: abababab$
+1#1: S,~,~|Q,$
+2#2: Q,a,$|Q$a,$
+3#3: Q$a,~,~|Q,a
+4#9: Q,b,a|Q,~
+5#2: Q,a,$|Q$a,$
+6#3: Q$a,~,~|Q,a
+7#9: Q,b,a|Q,~
+8#2: Q,a,$|Q$a,$
+9#3: Q$a,~,~|Q,a
+10#9: Q,b,a|Q,~
+11#2: Q,a,$|Q$a,$
+12#3: Q$a,~,~|Q,a
+13#9: Q,b,a|Q,~
+14#12: Q,$,$|F,~
+Accepted
